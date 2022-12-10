@@ -86,9 +86,9 @@ namespace WoWLauncher
         private void playBtn_Click(object? sender, RoutedEventArgs? e)
         {
             // Check if the program exists, first
-            if (File.Exists("Wow.exe") && !m_Patcher.IsPatching)
+            if (File.Exists("client.exe") && !m_Patcher.IsPatching)
             {
-                Process.Start(new ProcessStartInfo("Wow.exe")
+                Process.Start(new ProcessStartInfo("client.exe")
                 {
                     UseShellExecute = true
                 });

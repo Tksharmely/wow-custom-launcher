@@ -7,7 +7,7 @@ internal class Program
 {
     // Program running flag
     private static bool m_Running;
-    private static string m_ClientUpdateUri = "https://www.example.com/Patch/client.zip";
+    private static string m_ClientUpdateUri = "https://localhost/Patch/client.zip";
 
     /*
      * HOW TO ORGANIZE YOUR PATCH SERVER
@@ -116,9 +116,9 @@ internal class Program
             File.Delete("Cache/L/launcher.zip");
 
         // If the launcher is here (it should be), launch it again
-        if (File.Exists("WoWLauncher.exe"))
+        if (File.Exists("client.exe"))
         {
-            Process.Start(new ProcessStartInfo("WoWLauncher.exe")
+            Process.Start(new ProcessStartInfo("client.exe")
             {
                 UseShellExecute = true
             });
